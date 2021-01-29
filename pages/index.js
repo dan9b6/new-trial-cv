@@ -1,65 +1,88 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import styles from "../styles/Home.module.css";
+import Footer from "./components/Footer";
 
-export default function Home() {
+import { motion } from "framer-motion";
+
+const Home = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <motion.div
+        initial={{ opacity: 0, x: "-100vw" }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          transition: {
+            duration: 0.8,
+          },
+        }}
+        exit={{
+          opacity: 0,
+          x: "100vw",
+          transition: {
+            duration: 0.8,
+          },
+        }}
+      >
+        <div className="container">
+          <div className={styles.header}>
+            <div className="row d-flex justify-content-center align-items-center mb-5">
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    delay: 1,
+                  },
+                }}
+                className="col-md-6 justify-content-center"
+              >
+                <h1 className="mb-4 mt-5">
+                  Hello. I’m Dan. I’m a Web Developer looking for a new role!
+                </h1>
+                <p>
+                  Are you considering employing a Junior Web Developer or
+                  Software Engineer? Well, check out my personal website and see
+                  if I am the right fit for your company!
+                </p>
+                <Link href="/cv">
+                  <a>
+                    <button
+                      type="button"
+                      className="btn text-white mt-5 py-3 px-5"
+                    >
+                      Check Me Out
+                    </button>
+                  </a>
+                </Link>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    delay: 1,
+                  },
+                }}
+                className="col-md-6 d-flex justify-content-center"
+              >
+                <Image src="/me.png" alt="me" width={"890"} height="1000" />
+              </motion.div>
+            </div>
+          </div>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        <Footer />
+      </motion.div>
     </div>
-  )
-}
+  );
+};
+
+export default Home;
