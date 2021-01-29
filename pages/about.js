@@ -23,7 +23,6 @@ class About extends React.Component {
   }
 
   render() {
-    AOS.init();
     return (
       <div>
         <Head>
@@ -251,6 +250,7 @@ class About extends React.Component {
         </motion.div>
       </div>
     );
+    AOS.init();
   }
 }
 
