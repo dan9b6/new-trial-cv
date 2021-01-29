@@ -1,15 +1,11 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import Modal from "./components/Modal";
 import Modal2 from "./components/Modal2";
 import Modal3 from "./components/Modal3";
 import Footer from "./components/Footer";
 
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
 import styles from "../styles/Home.module.css";
 
 import { motion } from "framer-motion";
@@ -25,7 +21,6 @@ class Cv extends React.Component {
   }
 
   render() {
-    AOS.init();
     return (
       <div>
         <Head>

@@ -22,6 +22,10 @@ class About extends React.Component {
     };
   }
 
+  componentDidMount() {
+    AOS.init({});
+  }
+
   render() {
     return (
       <div>
