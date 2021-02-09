@@ -30,8 +30,7 @@ class About extends React.Component {
     return (
       <div>
         <Head>
-          <title>Create Next App</title>
-          <link rel="icon" href="/favicon.ico" />
+          <title>What Can I Offer? | danburts</title>
         </Head>
         <motion.div
           initial={{ opacity: 0, x: "-100vw" }}
@@ -64,7 +63,12 @@ class About extends React.Component {
                 animate={{ opacity: 1, y: 0, transition: { delay: 1.1 } }}
                 className="col-md-3 text-center  my-5"
               >
-                <Image src="/about1.gif" alt="me" width={"250"} height="250" />
+                <Image
+                  src="/gifs/about1.gif"
+                  alt="me"
+                  width={"250"}
+                  height="250"
+                />
                 <h3 className="mb-4">Try Before You Buy!</h3>
                 <p>
                   I’m so eager to prove my worth, I’ll give you two weeks free
@@ -78,7 +82,12 @@ class About extends React.Component {
                 animate={{ opacity: 1, y: 0, transition: { delay: 1.3 } }}
                 className="col-md-3 text-center  my-5"
               >
-                <Image src="/about2.gif" alt="me" width={"250"} height="250" />
+                <Image
+                  src="/gifs/about2.gif"
+                  alt="me"
+                  width={"250"}
+                  height="250"
+                />
                 <h3 className="mb-4">Enthusiasm</h3>
                 <p>
                   This is something I am incredibly passionate about. I know I
@@ -92,7 +101,12 @@ class About extends React.Component {
                 animate={{ opacity: 1, y: 0, transition: { delay: 1.5 } }}
                 className="col-md-3 text-center  my-5"
               >
-                <Image src="/about3.gif" alt="me" width={"250"} height="250" />
+                <Image
+                  src="/gifs/about3.gif"
+                  alt="me"
+                  width={"250"}
+                  height="250"
+                />
                 <h3 className="mb-4">Innovation</h3>
                 <p>
                   I have a big desire to be at the forefront of innovation,
@@ -104,19 +118,21 @@ class About extends React.Component {
             </div>
 
             <div className={styles.project}>
-              <div data-aos="fade-up" className={styles.img}>
-                <Image
-                  src="/project.png"
-                  alt="me"
-                  width={"250"}
-                  height={"140"}
-                />
+              <div className="text-center">
+                <div data-aos="fade-up" className={styles.img}>
+                  <Image
+                    src="/project.png"
+                    alt="me"
+                    width={"250"}
+                    height={"140"}
+                  />
+                </div>
+                <h1 className="text-center mb-5">Projects</h1>
               </div>
-              <h1 className="text-center my-5">Projects</h1>
               <div className="row justify-content-evenly">
                 <div data-aos="fade-up" className="col-md-3 text-center  my-5">
                   <Image
-                    src="/puffdaddy.png"
+                    src="/projects/puffdaddy.png"
                     alt="me"
                     width={"250"}
                     height={"150"}
@@ -143,7 +159,7 @@ class About extends React.Component {
                 </div>
                 <div data-aos="fade-up" className="col-md-3 text-center  my-5">
                   <Image
-                    src="/foothead.png"
+                    src="/projects/foothead.png"
                     alt="me"
                     width={"250"}
                     height={"150"}
@@ -170,7 +186,7 @@ class About extends React.Component {
                 </div>
                 <div data-aos="fade-up" className="col-md-3 text-center  my-5">
                   <Image
-                    src="/ironcode.png"
+                    src="/projects/ironcode.png"
                     alt="me"
                     width={"250"}
                     height={"150"}
@@ -196,58 +212,6 @@ class About extends React.Component {
                   </Link>
                 </div>
               </div>
-              <h1 className="text-center my-5">My CV..</h1>
-              <h2 className="text-center">
-                How long have I got to convince you?
-              </h2>
-              <div className="row mt-5 justify-content-center align-items-center text-center">
-                <div data-aos="fade-up" className="col-md-3">
-                  <button
-                    className="btn text-white py-3 px-5 mb-5"
-                    onClick={() => {
-                      this.setState({
-                        showComponentOne: !this.state.showComponentOne,
-                        showComponentTwo: false,
-                        showComponentThree: false,
-                      });
-                    }}
-                  >
-                    A few seconds
-                  </button>
-                </div>
-                <div data-aos="fade-up" className="col-md-3">
-                  <button
-                    className="btn text-white py-3 px-5 mb-5"
-                    onClick={() => {
-                      this.setState({
-                        showComponentTwo: !this.state.showComponentTwo,
-                        showComponentOne: false,
-                        showComponentThree: false,
-                      });
-                    }}
-                  >
-                    A few minutes
-                  </button>
-                </div>
-                <div data-aos="fade-up" className="col-md-3">
-                  <button
-                    className="btn text-white py-3 px-5 mb-5"
-                    onClick={() => {
-                      this.setState({
-                        showComponentThree: !this.state.showComponentThree,
-                        showComponentOne: false,
-                        showComponentTwo: false,
-                      });
-                    }}
-                  >
-                    10/15 minutes
-                  </button>
-                </div>
-              </div>
-
-              {this.state.showComponentOne ? <Modal /> : null}
-              {this.state.showComponentTwo ? <Modal2 /> : null}
-              {this.state.showComponentThree ? <Modal3 /> : null}
             </div>
           </div>
           <Footer />

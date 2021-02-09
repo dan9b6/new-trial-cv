@@ -1,11 +1,25 @@
 import React from "react";
 import styles from "../../styles/Home.module.css";
+import { motion } from "framer-motion";
+
+import Image from "next/image";
 
 const Modal3 = () => {
   return (
-    <div className={styles.modal}>
+    <motion.div
+      className={styles.modal}
+      initial={{ opacity: 0, y: 400 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.3,
+        },
+      }}
+      exit={{ opacity: 0 }}
+    >
       <div className="container mt-5 pt-2 pb-4">
-        <div className="row justify-content-center text-center">
+        <div className="row justify-content-center text-center align-items-center mb-4 reverse">
           <div className="col-md-6 px-5 py-3">
             <h2>1996</h2>
             <p>
@@ -13,10 +27,16 @@ const Modal3 = () => {
               'Dolly' the sheep was born. What a time to be alive!
             </p>
           </div>
-          <div className="col-md-6"></div>
+          <div className="col-md-6">
+            <Image
+              src="/modals/modal-3/baby-me.png"
+              alt="me"
+              width={"200"}
+              height={"200"}
+            />
+          </div>
         </div>
-        <div className="row justify-content-center text-center">
-          <div className="col-md-6"></div>
+        <div className="row justify-content-center text-center align-items-center mb-4 ">
           <div className="col-md-6 px-5 py-3">
             <h2>2000</h2>
             <p>
@@ -25,8 +45,16 @@ const Modal3 = () => {
               the world of tech.
             </p>
           </div>
+          <div className="col-md-6">
+            <Image
+              src="/modals/modal-3/school-me.png"
+              alt="me"
+              width={"200"}
+              height={"200"}
+            />
+          </div>
         </div>
-        <div className="row justify-content-center text-center">
+        <div className="row justify-content-center text-center align-items-center mb-4 reverse">
           <div className="col-md-6 px-5 py-3">
             <h2>2002</h2>
             <p>
@@ -36,10 +64,16 @@ const Modal3 = () => {
               that being a fan of this club won't be a dealbreaker!
             </p>
           </div>
-          <div className="col-md-6"></div>
+          <div className="col-md-6">
+            <Image
+              src="/modals/modal-3/highbury.jpg"
+              alt="me"
+              width={"200"}
+              height={"200"}
+            />
+          </div>
         </div>
-        <div className="row justify-content-center text-center">
-          <div className="col-md-6"></div>
+        <div className="row justify-content-center text-center align-items-center mb-4">
           <div className="col-md-6 px-5 py-3">
             <h2>2010</h2>
             <p>
@@ -49,8 +83,16 @@ const Modal3 = () => {
               that £25 a week went a long way back then.
             </p>
           </div>
+          <div className="col-md-6">
+            <Image
+              src="/modals/modal-3/paper.jpg"
+              alt="me"
+              width={"200"}
+              height={"200"}
+            />
+          </div>
         </div>
-        <div className="row justify-content-center text-center">
+        <div className="row justify-content-center text-center align-items-center mb-4 reverse">
           <div className="col-md-6 px-5 py-3">
             <h2>2011</h2>
             <p>
@@ -60,10 +102,16 @@ const Modal3 = () => {
               However, I didn't quite make the cut.
             </p>
           </div>
-          <div className="col-md-6"></div>
+          <div className="col-md-6">
+            <Image
+              src="/modals/modal-3/yeovil.png"
+              alt="me"
+              width={"200"}
+              height={"200"}
+            />
+          </div>
         </div>
-        <div className="row justify-content-center text-center">
-          <div className="col-md-6"></div>
+        <div className="row justify-content-center text-center align-items-center mb-4">
           <div className="col-md-6 px-5 py-3">
             <h2>2012</h2>
             <p>
@@ -74,8 +122,16 @@ const Modal3 = () => {
               penalties.
             </p>
           </div>
+          <div className="col-md-6">
+            <Image
+              src="/modals/modal-3/gb-me.jpg"
+              alt="me"
+              width={"200"}
+              height={"200"}
+            />
+          </div>
         </div>
-        <div className="row justify-content-center text-center">
+        <div className="row justify-content-center text-center align-items-center mb-4 reverse">
           <div className="col-md-6 px-5 py-3">
             <h2>2015</h2>
             <p>
@@ -90,10 +146,11 @@ const Modal3 = () => {
               to increase.
             </p>
           </div>
-          <div className="col-md-6"></div>
+          <div className="col-md-6">
+            <Image src="/ttr-p.png" alt="me" width={"200"} height={"200"} />
+          </div>
         </div>
-        <div className="row justify-content-center text-center">
-          <div className="col-md-6"></div>
+        <div className="row justify-content-center text-center align-items-center mb-4">
           <div className="col-md-6 px-5 py-3">
             <h2>2019</h2>
             <p>
@@ -106,8 +163,16 @@ const Modal3 = () => {
               in tech.
             </p>
           </div>
+          <div className="col-md-6">
+            <Image
+              src="/modals/modal-3/thailand.jpg"
+              alt="me"
+              width={"200"}
+              height={"200"}
+            />
+          </div>
         </div>
-        <div className="row justify-content-center text-center">
+        <div className="row justify-content-center text-center align-items-center mb-4 reverse">
           <div className="col-md-6 px-5 py-3">
             <h2>2020</h2>
             <p>
@@ -131,10 +196,16 @@ const Modal3 = () => {
               bootcamp and leave with three fully functional projects.
             </p>
           </div>
-          <div className="col-md-6"></div>
+          <div className="col-md-6">
+            <Image
+              src="/ironhack-p.png"
+              alt="me"
+              width={"200"}
+              height={"200"}
+            />
+          </div>
         </div>
-        <div className="row justify-content-center text-center">
-          <div className="col-md-6"></div>
+        <div className="row justify-content-center text-center align-items-center mb-4">
           <div className="col-md-6 px-5 py-3">
             <h2>2021</h2>
             <p>
@@ -145,7 +216,7 @@ const Modal3 = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

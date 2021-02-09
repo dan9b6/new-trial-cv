@@ -1,10 +1,22 @@
 import React from "react";
 import styles from "../../styles/Home.module.css";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Modal2 = () => {
   return (
-    <div className={styles.modal}>
+    <motion.div
+      className={styles.modal}
+      initial={{ opacity: 0, y: 400 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.3,
+        },
+      }}
+      exit={{ opacity: 0 }}
+    >
       <div className="container mt-5 pt-2 pb-4">
         <div className="row justify-content-between text-center pt-5 px-4">
           <div className="col-md-2">
@@ -18,35 +30,80 @@ const Modal2 = () => {
             <h2 className="mb-5">Skills</h2>
             <div className="row mb-3">
               <div className="col-md-4">
-                <Image src="/react-p.png" alt="me" width={"50"} height={"50"} />
+                <Image
+                  src="/modals/modal-2/react-p.png"
+                  alt="me"
+                  width={"50"}
+                  height={"50"}
+                />
               </div>
               <div className="col-md-4">
-                <Image src="/next-p.png" alt="me" width={"50"} height={"50"} />
+                <Image
+                  src="/modals/modal-2/next-p.png"
+                  alt="me"
+                  width={"50"}
+                  height={"50"}
+                />
               </div>
               <div className="col-md-4">
-                <Image src="/js-p.png" alt="me" width={"50"} height={"50"} />
+                <Image
+                  src="/modals/modal-2/js-p.png"
+                  alt="me"
+                  width={"50"}
+                  height={"50"}
+                />
               </div>
             </div>
             <div className="row mb-3">
               <div className="col-md-4">
-                <Image src="/html-p.png" alt="me" width={"50"} height={"50"} />
+                <Image
+                  src="/modals/modal-2/html-p.png"
+                  alt="me"
+                  width={"50"}
+                  height={"50"}
+                />
               </div>
               <div className="col-md-4">
-                <Image src="/css-p.png" alt="me" width={"50"} height={"50"} />
+                <Image
+                  src="/modals/modal-2/css-p.png"
+                  alt="me"
+                  width={"50"}
+                  height={"50"}
+                />
               </div>
               <div className="col-md-4">
-                <Image src="/sass.p.png" alt="me" width={"50"} height={"50"} />
+                <Image
+                  src="/modals/modal-2/sass.p.png"
+                  alt="me"
+                  width={"50"}
+                  height={"50"}
+                />
               </div>
             </div>
             <div className="row">
               <div className="col-md-4">
-                <Image src="/boot-p.png" alt="me" width={"50"} height={"50"} />
+                <Image
+                  src="/modals/modal-2/boot-p.png"
+                  alt="me"
+                  width={"50"}
+                  height={"50"}
+                />
               </div>
               <div className="col-md-4">
-                <Image src="/git-p.png" alt="me" width={"50"} height={"50"} />
+                <Image
+                  src="/modals/modal-2/git-p.png"
+                  alt="me"
+                  width={"50"}
+                  height={"50"}
+                />
               </div>
               <div className="col-md-4">
-                <Image src="/c-p.png" alt="me" width={"50"} height={"50"} />
+                <Image
+                  src="/modals/modal-2/c-p.png"
+                  alt="me"
+                  width={"50"}
+                  height={"50"}
+                />
               </div>
             </div>
           </div>
@@ -74,7 +131,7 @@ const Modal2 = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -24,8 +24,7 @@ class Cv extends React.Component {
     return (
       <div>
         <Head>
-          <title>Create Next App</title>
-          <link rel="icon" href="/favicon.ico" />
+          <title>CV | danburts</title>
         </Head>
         <motion.div
           initial={{ opacity: 0, x: "-100vw" }}
@@ -48,7 +47,7 @@ class Cv extends React.Component {
             <div className={styles.cv}>
               <motion.h1
                 initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0, transition: { delay: 1 } }}
+                animate={{ opacity: 1, y: 0, transition: { delay: 1.2 } }}
                 className="text-center my-5"
               >
                 My CV..
@@ -61,7 +60,7 @@ class Cv extends React.Component {
                 How long have I got to convince you?
               </motion.h2>
               <div className="row mt-5 justify-content-center align-items-center text-center">
-                <div data-aos="fade-up" className="col-md-3">
+                <div className="col-md-3">
                   <motion.button
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1, transition: { delay: 1 } }}
@@ -77,7 +76,7 @@ class Cv extends React.Component {
                     A few seconds
                   </motion.button>
                 </div>
-                <div data-aos="fade-up" className="col-md-3">
+                <div className="col-md-3">
                   <motion.button
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1, transition: { delay: 1.2 } }}
@@ -93,7 +92,7 @@ class Cv extends React.Component {
                     A few minutes
                   </motion.button>
                 </div>
-                <div data-aos="fade-up" className="col-md-3">
+                <div className="col-md-3">
                   <motion.button
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1, transition: { delay: 1.4 } }}

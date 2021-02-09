@@ -10,8 +10,7 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>danburts</title>
       </Head>
       <motion.div
         initial={{ opacity: 0, x: "-100vw" }}
@@ -32,7 +31,20 @@ const Home = () => {
       >
         <div className="container">
           <div className={styles.header}>
-            <div className="row d-flex justify-content-center align-items-center mb-5">
+            <div className="row d-flex align-items-center mb-5">
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    delay: 1,
+                  },
+                }}
+                className="col-md-6 d-flex justify-content-center"
+              >
+                <Image src="/me.png" alt="me" width={"890"} height="1000" />
+              </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 animate={{
@@ -62,19 +74,6 @@ const Home = () => {
                     </button>
                   </a>
                 </Link>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 100 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    delay: 1,
-                  },
-                }}
-                className="col-md-6 d-flex justify-content-center"
-              >
-                <Image src="/me.png" alt="me" width={"890"} height="1000" />
               </motion.div>
             </div>
           </div>

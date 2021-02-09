@@ -22,7 +22,7 @@ const Footer = () => {
     >
       <Image
         className="mt-4"
-        src="/wave.gif"
+        src="/gifs/wave.gif"
         alt="me"
         width={"180"}
         height={"140"}
@@ -31,11 +31,11 @@ const Footer = () => {
       <h1>Say Hi</h1>
       <p>07956107973 | danbh7296@gmail.com</p>
       <div className={styles.links}>
-        <div className="d-flex text-center justify-content-evenly mb-4">
-          <i class="fa fa-facebook" aria-hidden="true"></i>
-          <i class="fa fa-instagram" aria-hidden="true"></i>
-          <i class="fa fa-linkedin" aria-hidden="true"></i>
-          <i class="fa fa-github" aria-hidden="true"></i>
+        <div className="d-flex text-center justify-content-center mb-4">
+          <i className="fa fa-facebook mx-3" aria-hidden="true"></i>
+          <i className="fa fa-instagram mx-3" aria-hidden="true"></i>
+          <i className="fa fa-linkedin mx-3" aria-hidden="true"></i>
+          <i className="fa fa-github mx-3" aria-hidden="true"></i>
         </div>
       </div>
       <p>Copyright © 2020 Dan Burton. All Rights Reserved</p>
